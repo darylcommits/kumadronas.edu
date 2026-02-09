@@ -1,5 +1,5 @@
 // Toast.jsx - Beautiful notification system
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { CheckCircle, XCircle, AlertTriangle, Info, X } from 'lucide-react';
 
 const Toast = ({ message, type = 'success', duration = 4000, onClose }) => {
@@ -16,7 +16,7 @@ const Toast = ({ message, type = 'success', duration = 4000, onClose }) => {
     }, duration);
 
     return () => clearTimeout(timer);
-  }, [duration]);
+  }, [duration]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleClose = () => {
     setIsExiting(true);
@@ -57,11 +57,10 @@ const Toast = ({ message, type = 'success', duration = 4000, onClose }) => {
 
   return (
     <div
-      className={`fixed top-4 right-4 z-[9999] transition-all duration-300 transform ${
-        isVisible && !isExiting
+      className={`fixed top-4 right-4 z-[9999] transition-all duration-300 transform ${isVisible && !isExiting
           ? 'translate-x-0 opacity-100'
           : 'translate-x-full opacity-0'
-      }`}
+        }`}
       style={{ maxWidth: '420px', minWidth: '320px' }}
     >
       <div className={`${bgColor} text-white rounded-lg shadow-2xl overflow-hidden`}>

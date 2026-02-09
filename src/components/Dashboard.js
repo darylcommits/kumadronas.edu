@@ -95,7 +95,7 @@ const Dashboard = ({ user, session, onProfileUpdate }) => {
   const [systemLogs, setSystemLogs] = useState([]);
 
   // Toast notifications
-  const { toasts, removeToast, success, error, warning, info } = useToast();
+  const { toasts, removeToast, success, error, warning } = useToast();
 
   useEffect(() => {
     initializeDashboard();

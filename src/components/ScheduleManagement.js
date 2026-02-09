@@ -45,7 +45,7 @@ const ScheduleManagement = () => {
   });
 
   // Toast notifications
-  const { toasts, removeToast, success, error, warning, info } = useToast();
+  const { toasts, removeToast, success, error, warning } = useToast();
 
   const hospitalLocations = [
     { name: 'ISDH - Magsingal', capacity: 4, description: 'Ilocos Sur District Hospital - Magsingal' },
@@ -69,7 +69,7 @@ const ScheduleManagement = () => {
       fetchSchedules(),
       fetchPendingBookings()
     ]);
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchSchedules = async () => {
     try {
@@ -379,7 +379,7 @@ const ScheduleManagement = () => {
         .insert(schedulesToCreate);
 
       if (bulkError) throw bulkError;
-      
+
       await fetchSchedules();
       success(`Created ${schedulesToCreate.length} schedules successfully`);
     } catch (err) {
@@ -951,7 +951,7 @@ const ScheduleManagement = () => {
   return (
     <>
       <ToastContainer toasts={toasts} removeToast={removeToast} />
-      
+
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <div>

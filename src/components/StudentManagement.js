@@ -33,11 +33,11 @@ const StudentManagement = () => {
   const [editFormData, setEditFormData] = useState({});
 
   // Toast notifications
-  const { toasts, removeToast, success, error, warning, info } = useToast();
+  const { toasts, removeToast, success, error, warning } = useToast();
 
   useEffect(() => {
     fetchStudents();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchStudents = async () => {
     try {
@@ -651,7 +651,7 @@ const StudentManagement = () => {
   return (
     <>
       <ToastContainer toasts={toasts} removeToast={removeToast} />
-      
+
       <div className="space-y-6">
         <div className="flex justify-between items-center">
           <div>
