@@ -77,7 +77,7 @@ const LandingPage = ({ onGetStarted }) => {
                       Subscribe to restore all data and APIs immediately. Your system will be fully operational within minutes.
                     </p>
                     
-                      href="https://vercel.com"
+                      href="https://vercel.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center"
