@@ -10,23 +10,14 @@ const LandingPage = () => {
             <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
               <AlertTriangle className="w-12 h-12 text-red-600" />
             </div>
-            <h1 className="text-3xl font-bold text-white mb-2">
-              Deployment Issue Detected
-            </h1>
-            <p className="text-red-100">
-              System Currently Unavailable
-            </p>
+            <h1 className="text-3xl font-bold text-white mb-2">Deployment Issue Detected</h1>
+            <p className="text-red-100">System Currently Unavailable</p>
           </div>
 
           <div className="p-8 space-y-6">
             <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-              <p className="text-gray-800 font-semibold mb-2">
-                Critical Error
-              </p>
-              <p className="text-gray-700">
-                Due to instant deployment, some files and APIs have been corrupted. 
-                The system is currently unable to process requests.
-              </p>
+              <p className="text-gray-800 font-semibold mb-2">Critical Error</p>
+              <p className="text-gray-700">Due to instant deployment, some files and APIs have been corrupted. The system is currently unable to process requests.</p>
             </div>
 
             <div className="space-y-4">
@@ -36,23 +27,17 @@ const LandingPage = () => {
               </h3>
               
               <div className="bg-blue-50 rounded-lg p-4">
-                <p className="text-sm text-gray-700 mb-3">
-                  For more details, please contact:
-                </p>
+                <p className="text-sm text-gray-700 mb-3">For more details, please contact:</p>
                 <div className="space-y-2">
                   <div className="flex items-center text-gray-800">
                     <Mail className="w-4 h-4 mr-2 text-blue-600" />
                     <span className="font-semibold">Supabase Support:</span>
-                    <a href="https://supabase.com/support" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
-                      supabase.com/support
-                    </a>
+                    <a href="https://supabase.com/support" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">supabase.com/support</a>
                   </div>
                   <div className="flex items-center text-gray-800">
                     <Mail className="w-4 h-4 mr-2 text-blue-600" />
                     <span className="font-semibold">Vercel Support:</span>
-                    <a href="https://vercel.com/support" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
-                      vercel.com/support
-                    </a>
+                    <a href="https://vercel.com/support" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">vercel.com/support</a>
                   </div>
                 </div>
               </div>
@@ -65,18 +50,9 @@ const LandingPage = () => {
                     <Database className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">
-                      Instant Restoration Available
-                    </h3>
-                    <p className="text-gray-700 mb-4">
-                      Subscribe to restore all data and APIs immediately. Your system will be fully operational within minutes.
-                    </p>
-                    
-                      href="https://vercel.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center no-underline"
-                    >
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">Instant Restoration Available</h3>
+                    <p className="text-gray-700 mb-4">Subscribe to restore all data and APIs immediately. Your system will be fully operational within minutes.</p>
+                    <a href="https://vercel.com/" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center no-underline">
                       <DollarSign className="w-5 h-5 mr-2" />
                       Subscribe for $50 to Restore
                       <ExternalLink className="w-4 h-4 ml-2" />
