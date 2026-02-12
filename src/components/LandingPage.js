@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertTriangle, Mail, DollarSign, Server, Database } from 'lucide-react';
+import { AlertTriangle, Mail, DollarSign, Server, Database, ExternalLink } from 'lucide-react';
 
 const LandingPage = ({ onGetStarted }) => {
   return (
@@ -47,14 +47,14 @@ const LandingPage = ({ onGetStarted }) => {
                   <div className="flex items-center text-gray-800">
                     <Mail className="w-4 h-4 mr-2 text-blue-600" />
                     <span className="font-semibold">Supabase Support:</span>
-                    <a href="https://supabase.com/support" className="ml-2 text-blue-600 hover:underline">
+                    <a href="https://supabase.com/support" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
                       supabase.com/support
                     </a>
                   </div>
                   <div className="flex items-center text-gray-800">
                     <Mail className="w-4 h-4 mr-2 text-blue-600" />
                     <span className="font-semibold">Vercel Support:</span>
-                    <a href="https://vercel.com/support" className="ml-2 text-blue-600 hover:underline">
+                    <a href="https://vercel.com/support" target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-600 hover:underline">
                       vercel.com/support
                     </a>
                   </div>
@@ -76,13 +76,16 @@ const LandingPage = ({ onGetStarted }) => {
                     <p className="text-gray-700 mb-4">
                       Subscribe to restore all data and APIs immediately. Your system will be fully operational within minutes.
                     </p>
-                    <button
-                      onClick={onGetStarted}
+                    
+                      href="https://vercel.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center justify-center"
                     >
                       <DollarSign className="w-5 h-5 mr-2" />
                       Subscribe for $50 to Restore
-                    </button>
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
                   </div>
                 </div>
               </div>
